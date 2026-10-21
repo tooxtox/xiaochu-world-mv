@@ -1,0 +1,40 @@
+{
+  "name": "xiaochu-mv",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Xiaochu cel-style Remotion MV: 34 shots, generated character/background assets and Japanese/Chinese motion typography.",
+  "scripts": {
+    "studio": "remotion studio src/index.ts --port=3000",
+    "typecheck": "tsc --noEmit",
+    "check:versions": "remotion versions",
+    "render:full": "remotion render src/index.ts FullMV-JA-ZH out/xiaochu-full.mp4 --concurrency=2 --codec=h264 --hardware-acceleration=disable --crf=18 --audio-bitrate=320k",
+    "render:nvenc": "remotion render src/index.ts FullMV-JA-ZH out/xiaochu-full-nvenc.mp4 --concurrency=2 --codec=h264 --hardware-acceleration=required --video-bitrate=20M --audio-bitrate=320k",
+    "still": "remotion still src/index.ts FullMV-JA-ZH out/still.png --frame=103",
+    "audit": "node tools/audit.mjs"
+  },
+  "dependencies": {
+    "remotion": "4.0.537",
+    "@remotion/cli": "4.0.537",
+    "@remotion/renderer": "4.0.537",
+    "@remotion/three": "4.0.537",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "@react-three/fiber": "9.8.2",
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@types/three": "0.186.0",
+    "@types/node": "26.6.5"
+  },
+  "engines": {
+    "node": ">=22 <23"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tooxtox/xiaochu-world-mv.git"
+  }
+}

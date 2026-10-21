@@ -1,0 +1,68 @@
+[
+  {
+    "path": "public/characters/01-front-breeze.png",
+    "prompt": "assets/prompts/characters/01-front-breeze-prompt.txt",
+    "sha256": "5fd8fcba797bf11167d57eeea3562c0798960fc7bce021d6d90d30cb4804d50d",
+    "generator": "built-in imagegen"
+  },
+  {
+    "path": "public/characters/02-look-back.png",
+    "prompt": "assets/prompts/characters/02-look-back-prompt.txt",
+    "sha256": "a828af9b64d49620fe3bae237806f765297423957b8604ba6dc879a8d40f1f05",
+    "generator": "built-in imagegen"
+  },
+  {
+    "path": "public/characters/03-open-hand.png",
+    "prompt": "assets/prompts/characters/03-open-hand-prompt.txt",
+    "sha256": "8e75f917d2ef24e98ec81594b10690d50bbec3742e1f0f8f800b46d38a2e0219",
+    "generator": "built-in imagegen"
+  },
+  {
+    "path": "public/characters/04-eyes-closed-smile.png",
+    "prompt": "assets/prompts/characters/04-eyes-closed-smile-prompt.txt",
+    "sha256": "04f84a761ef028f04343edd57b203e5e332c7cc38f784503b25fdd05a018c77a",
+    "generator": "built-in imagegen"
+  },
+  {
+    "path": "public/characters/05-walk-key-a.png",
+    "prompt": "assets/prompts/characters/05-walk-key-a-prompt.txt",
+    "sha256": "2d89cd91b6d7caf89f3d7bfa1c9599637d90e911bf44702c1b01d54329757897",
+    "generator": "built-in imagegen"
+  },
+  {
+    "path": "public/characters/06-look-up.png",
+    "prompt": "assets/prompts/characters/06-look-up-prompt.txt",
+    "sha256": "c9fc89a3408f3e6aecafa310fadd0b2803920364dbbb1c8ea216623c27bfab94",
+    "generator": "built-in imagegen"
+  },
+  {
+    "path": "public/characters/07-reading.png",
+    "prompt": "assets/prompts/characters/07-reading-prompt.txt",
+    "sha256": "103df130a90c1a78f5a3e49a1e2e7caea906140809d5a6592f76a323a4ba8118",
+    "generator": "built-in imagegen"
+  },
+  {
+    "path": "public/characters/08-portrait.png",
+    "prompt": "assets/prompts/characters/08-portrait-prompt.txt",
+    "sha256": "e2adcd083e82220ce6e71790cfd1c0a1856afb6d33bdb8561ca76ecf0a08d4a2",
+    "generator": "built-in imagegen"
+  },
+  {
+    "path": "public/backgrounds/01-library-day.png",
+    "prompt": "assets/prompts/backgrounds/01-library-day-prompt.txt",
+    "sha256": "d0166009f74541ce065feb02b2e6b5e6feb56c28ed51168ac836dce9c89feb0d",
+    "generator": "built-in imagegen"
+  },
+  {
+    "path": "public/backgrounds/02-garden-sky.png",
+    "prompt": "assets/prompts/backgrounds/02-garden-sky-prompt.txt",
+    "sha256": "57f3f37cfc6f8e1120025c8fabd48e811d9e96cc114649dc938915a1fa72cb46",
+    "generator": "built-in imagegen"
+  },
+  {
+    "path": "public/backgrounds/03-city-evening.png",
+    "prompt": "assets/prompts/backgrounds/03-city-evening-prompt.txt",
+    "sha256": "9b2d72b9a070b348e1be8ea00e77a3842621ab21e6dc9deaff4c07fa35f78909",
+    "generator": "built-in imagegen"
+  }
+]

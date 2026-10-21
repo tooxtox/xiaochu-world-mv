@@ -1,0 +1,41 @@
+export type FullWorld = 'rooftop' | 'classroom' | 'library' | 'garden' | 'city' | 'clock' | 'night' | 'sky' | 'flight' | 'water';
+export type FullPose = 'front' | 'look-back' | 'open-hand' | 'smile' | 'walk-key' | 'look-up' | 'reading' | 'portrait' | 'none';
+export type FullShot = {id: string; start: number; end: number; world: FullWorld; pose: FullPose; side: 'left' | 'right' | 'center'; framing: 'medium' | 'wide' | 'close'; warm?: boolean; motif?: 'pages' | 'petals' | 'birds' | 'stars' | 'world';};
+const F = (s: number) => Math.round(s * 30);
+const raw: [string, number, number, FullWorld, FullPose, 'left' | 'right' | 'center', 'medium' | 'wide' | 'close', FullShot['motif']?, boolean?][] = [
+  ['01-opening-rooftop', 0, 9.02, 'rooftop', 'front', 'right', 'medium', 'birds'],
+  ['02-small-world', 9.02, 16.12, 'library', 'reading', 'left', 'medium', 'pages'],
+  ['03-following-a-dream', 16.12, 23.82, 'classroom', 'look-back', 'left', 'medium'],
+  ['04-time-travel', 23.82, 31.25, 'clock', 'look-up', 'right', 'medium', 'stars'],
+  ['05-imagined-city', 31.25, 39.85, 'city', 'walk-key', 'right', 'medium'],
+  ['06-little-possibilities', 39.85, 46.65, 'garden', 'front', 'left', 'medium', 'petals'],
+  ['07-becoming-a-star', 46.65, 54.84, 'night', 'look-up', 'left', 'medium', 'stars'],
+  ['08-walk-the-world', 54.84, 59.56, 'garden', 'front', 'center', 'wide', 'petals'],
+  ['09-speaking-of-tomorrow', 59.56, 67.18, 'sky', 'open-hand', 'left', 'medium', 'birds'],
+  ['10-naming-the-world', 67.18, 74.4, 'sky', 'look-up', 'right', 'medium', 'world'],
+  ['11-pages-in-the-air', 74.4, 82.4, 'library', 'reading', 'right', 'wide', 'pages'],
+  ['12-a-quiet-glance', 82.4, 89.82, 'rooftop', 'look-back', 'left', 'medium', 'birds'],
+  ['13-a-story-that-smiles', 89.82, 97.92, 'library', 'reading', 'right', 'medium', 'pages'],
+  ['14-unusual-books', 97.92, 105.12, 'library', 'reading', 'left', 'medium', 'pages', true],
+  ['15-a-happy-ending', 105.12, 112.56, 'city', 'look-back', 'right', 'medium'],
+  ['16-protecting-someone', 112.56, 119.96, 'classroom', 'open-hand', 'left', 'medium'],
+  ['17-a-paper-conversation', 119.96, 127.14, 'flight', 'open-hand', 'left', 'wide', 'birds'],
+  ['18-falling-through-the-sky', 127.14, 133.8, 'night', 'look-up', 'right', 'medium', 'stars'],
+  ['19-speaking-of-yesterday', 133.8, 141.58, 'library', 'reading', 'left', 'medium', 'pages'],
+  ['20-world-in-a-wish', 141.58, 148.8, 'sky', 'open-hand', 'right', 'medium', 'world'],
+  ['21-reflected-light', 148.8, 156, 'water', 'look-up', 'left', 'wide', 'stars'],
+  ['22-wind-between-flowers', 156, 163.5, 'garden', 'front', 'right', 'wide', 'petals'],
+  ['23-your-story-moves', 163.5, 170.6, 'city', 'look-back', 'left', 'medium'],
+  ['24-courage-connects', 170.6, 181.85, 'sky', 'open-hand', 'left', 'medium', 'world'],
+  ['25-an-open-heart', 181.85, 189.56, 'garden', 'smile', 'right', 'medium', 'petals', true],
+  ['26-a-shared-miracle', 189.56, 194.2, 'night', 'open-hand', 'left', 'medium', 'stars'],
+  ['27-memory-street', 194.2, 202, 'city', 'walk-key', 'right', 'medium'],
+  ['28-memory-pages', 202, 209.8, 'library', 'reading', 'left', 'medium', 'pages', true],
+  ['29-memory-garden', 209.8, 217.5, 'garden', 'front', 'center', 'wide', 'petals'],
+  ['30-the-same-window', 217.5, 223.66, 'classroom', 'look-back', 'right', 'medium', undefined, true],
+  ['31-no-need-to-be-a-hero', 223.66, 230.56, 'rooftop', 'front', 'right', 'medium', 'birds', true],
+  ['32-your-smile-is-enough', 230.56, 238.3, 'rooftop', 'portrait', 'left', 'close', undefined, true],
+  ['33-gently-held', 238.3, 246.5, 'garden', 'look-up', 'center', 'wide', 'petals', true],
+  ['34-final-breath', 246.5, 254.1666667, 'sky', 'none', 'center', 'wide', 'birds'],
+];
+export const fullShots: FullShot[] = raw.map(([id, start, end, world, pose, side, framing, motif, warm]) => ({id, start: F(start), end: F(end), world, pose, side, framing, motif, warm}));
